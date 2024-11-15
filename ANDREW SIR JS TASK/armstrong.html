@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let sum = 9474;
+
+function armstrong(sum) {
+    
+    let sum_len = 0;
+    let temp = sum;
+    //153>0 15>0 1>0 0>0
+    while (temp > 0) {
+        sum_len++;//0--1 --2 -- 3 
+        temp = (temp - (temp % 10)) / 10; // 10; 153-153%10/10  153-3=150/10 15 
+    }
+
+   
+    let add = 0;
+            // 153  153>0 --1st  //  153-(153%10)/10 = 153-3/10 = 150/10 = 15 --2nd 15 15>0  15-(15%10)/10 15-5/10 10/10  1--3rd  1 1>0 1-(1%10)/10   1-1/10 0/10 0  --4th 0>0 
+
+    for (let temp = sum; temp > 0; temp = (temp - (temp % 10)) / 10) {
+        let digit = temp % 10; // Extract the last digit
+        // 153%10 = 3
+        add += digit ** sum_len;
+        //   add = 0+3**3 = 27 
+    }
+    
+    if (add === sum) {
+        console.log("armstrong number");
+    } else {
+        console.log("not an armstrong number");
+    }
+}
+
+armstrong(sum);
+
+</script>
+</html>

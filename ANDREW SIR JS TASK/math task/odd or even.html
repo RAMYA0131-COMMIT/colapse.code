@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        { console.log("odd")
+              function findOddNumbers(arr) {
+    // Filter the array to get only odd numbers
+    let oddNumbers = arr.filter(num => num % 2 !== 0);
+    return oddNumbers;
+}
+
+// Example usage:
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let odd = findOddNumbers(numbers);
+console.log(odd); // Output: [1, 3, 5, 7, 9]
+}
+      
+{
+    console.log("even")
+    function findEvenNumbers(arr) {
+    // Filter the array to get only even numbers
+    let evenNumbers = arr.filter(num => num % 2 === 0);
+    return evenNumbers;
+}
+
+// Example usage:
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let even = findEvenNumbers(numbers);
+console.log(even); // Output: [2, 4, 6, 8]
+
+
+}
+
+    </script>
+    
+</body>
+</html>

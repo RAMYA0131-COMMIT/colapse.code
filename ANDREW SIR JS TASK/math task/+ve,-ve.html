@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("filter positive no")
+        {// Example array
+            const numbers = [-1, 2, -3, 4, -5, 6];
+
+// Function to filter positive numbers
+const positiveNumbers = numbers.filter(num => num > 0);
+
+console.log(positiveNumbers); // Output: [2, 4, 6]
+ }
+        
+
+
+{// Example array
+const numbers = [-1, 2, -3, 4, -5, 6];
+const positiveNumbers = [];
+
+// Loop to collect positive numbers
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > 0) {
+        positiveNumbers.push(numbers[i]);
+    }
+}
+
+console.log(positiveNumbers); // Output: [2, 4, 6]
+
+}
+
+{
+// Example array
+const numbers = [-1, 2, -3, 4, -5, 7,7,8,9,-3,-1];
+const positiveNumbers = [];
+
+// Using forEach to collect positive numbers
+numbers.forEach(num => {
+    if (num > 0) {
+        positiveNumbers.push(num);
+    }
+});
+
+console.log(positiveNumbers); // Output: [2, 4, 6]
+}
+
+console.log("negative")
+ {// Example array
+    const numbers = [-1, 2, -3, 4, -5, 6];
+// Function to filter positive numbers
+const positiveNumbers = numbers.filter(num => num < 0);
+console.log(positiveNumbers); // Output: [2, 4, 6]
+ }
+
+
+
+{// Example array
+    const numbers = [-1, 2, -3, 4, -5, 6];
+const positiveNumbers = [];
+
+// Loop to collect positive numbers
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 0) {
+        positiveNumbers.push(numbers[i]);
+    }
+}
+
+console.log(positiveNumbers); // Output: [2, 4, 6]
+
+}
+
+
+        
+    </script>
+    
+</body>
+</html>

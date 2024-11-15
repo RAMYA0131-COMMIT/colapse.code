@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="name">name :</h1>
+    <h1 id="age"> age :</h1>
+
+    <button  id="next">next</button>
+    <button  id="prev">prev</button>
+
+<script>
+
+let name1=document.getElementById('name')
+let age1=document.getElementById('age')
+
+let prev=document.getElementById('prev')
+let next=document.getElementById('next')
+
+const persons=[
+    {name:"harris",age:15},{name:"abi",age:24},{name:'baskar',age:45}
+]
+let count=0
+
+window.addEventListener('DOMContentLoaded',()=>{
+let person=persons[count]
+name1.textContent=`name:${person.name}`
+age1.textContent=`Age: ${person.age}`
+})
+
+next.addEventListener('click',()=>{
+count++
+if(count>=persons.length)
+{
+count=0
+}
+else{
+    let person=persons[count]
+    name1.textContent=`name: ${person.name}`
+    age1.textContent=`Age: ${person.age}`
+}
+
+})
+
+prev.addEventListener('click',()=>{
+
+    count--
+   let person=persons[count]
+name1.textContent=`name:${person.name}`
+age1.textContent=`Age: ${person.age}`
+})
+    </script>
+    
+</body>
+</html>

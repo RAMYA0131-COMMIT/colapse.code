@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="section"></div></div>
+<button onclick="display()" class="btn">Next</button>
+
+
+
+<script>
+    let url='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/234'    
+    //this id (any number under 1000)ex.253//
+
+
+
+    //check response in console message//
+  // fetch(url)  
+   //.then(res=>console.log(res))   
+  
+  
+   fetch(url)
+.then(res=>res.json())              //give id ,if its showing invalid id (end of url/252 or any)will be succesfull//
+.then(data=>console.log(data))      //this were we get loction of file {like data.image.url}//
+
+
+//function display()          
+//{ let id=Math.ceil(Math.random()*730)
+//fetch(`${url}/${id}`)
+//.then(res=>res.json())
+//.then(data=> document.getElementById('section').innerHTML+=`<img src=${data.image.url} height=200 width=200><h2>name :${data.name}</h2><h3> occupation :${data.work.occupation}</h3><h4> Id :${data.id}</h4><h4>Age :${data.age}</h4>`)}
+
+
+</script>
+</body>
+</html>

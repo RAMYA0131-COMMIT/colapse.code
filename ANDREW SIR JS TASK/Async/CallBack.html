@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        #text{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>call back function :</h1>
+    <h1 id="text"></h1>
+
+
+
+
+
+<!-- js callback sir given example
+ //one of way put 
+    let food
+    
+    function order()
+    {
+        setTimeout(() => {
+           food="fry rice"
+    console.log(food)
+        }, 3000);
+    }
+    order() //declare
+    -->
+
+   
+<script>
+
+
+function data(callback){
+    setTimeout(function(){
+        let fruit="apple, mango,orange ";
+        callback(fruit)
+    },2000)
+}
+
+function myfruit(data){
+    document.getElementById("text").innerHTML=data;
+}
+data(myfruit)
+
+
+
+</script>
+
+</body>
+</html>

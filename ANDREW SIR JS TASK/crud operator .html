@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        .table {
+
+            border: 2px solid black;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid;
+        }
+
+        .box {
+            width: 400px;
+            display: grid;
+            gap: 10px;
+
+
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 25px;
+        }
+
+        input {
+            border: 2px solid black;
+        }
+
+        .submit {
+            border: 2px solid black;
+            font-size: 25px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>operator :</h2>
+        <h3>Data Read,Data Create,DataEdit,Data Delete</h3>
+        <br><br>
+
+        <div class="box">
+            <form>
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="name" required>
+            <label>Age:</label>
+            <input type="number" id="age" placeholder="age" required>
+
+            <button class="submit" onclick="handlesubmit()">submit</button> <!--fuction -->
+
+            </form>
+        </div> <!--0 value input box it was allowed to submit-->
+        <div class="col-6">
+            <br><br>
+            <h2>Table :</h2>
+            <table class="table" id="table">
+                <!--table header name, age, s.no how to do and s.no 1,2,3 line vara vekka enna pananum-->
+                <!--table border finish fully-->
+
+            </table>
+        </div>
+    </div>
+    </div>
+    <script>
+
+
+        let number = 11
+
+        let persons = [{
+            name: 'ajay', age: 25
+        }, {
+            name: 'arun', age: 27
+        }]
+
+
+        let namei = document.getElementById('name')
+        let agei = document.getElementById('age')
+        let table = document.getElementById('table')
+
+        let edit = -1
+        function handlesubmit() {
+            if (edit == -1) {
+                let name = namei.value
+                let age = agei.value
+                let temp = {
+                    name: name, age: age
+                }
+                persons = [...persons, temp]
+                display()
+                clear()
+            }
+            else {
+                let name = namei.value
+                let age = agei.value
+                let temp = {
+                    name: name, age: age
+                }
+                persons[edit] = temp
+                display()
+                clear()
+                edit = -1
+            }
+
+        }
+
+
+
+        function display() {
+            table.innerHTML = persons.map((person, i) => 
+            `<th>S.No</th><th>Name</th><th>Age</th> 
+            <th>Edit</th><th>Delete</th>
+    <tr>
+        <td>${number}</td>
+<td>${person.name}</td>
+<td>${person.age}</td>
+<td><button onclick=edit1(${i}) >edit</button></td>
+<td><button onClick=del(${i})>delete</button></td>
+</tr>`)
+        }
+        function del(id) {
+            let temp = persons.filter((person, i) => i !== id)
+            persons = [...temp]
+            display()
+        }
+
+        function edit1(id) {
+            let temp = persons[id]
+            namei.value = temp.name
+            agei.value = temp.age
+            edit = id
+        }
+        // }
+        // function clear()
+        // {
+        //     namei.value=' '
+        //     agei.value=' '
+        // }
+
+
+
+        display()
+
+
+    </script>
+</body>
+
+</html>

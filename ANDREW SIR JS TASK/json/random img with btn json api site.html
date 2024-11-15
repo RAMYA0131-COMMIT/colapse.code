@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="section"></div>
+    <button onclick="section">click</button>
+
+    
+
+    <script>
+let url='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f'
+
+const display=async()=>{
+    let id=math.ceil(math.random()*730)
+    let res=await fetch(`${url}/${id}`)
+    let data=await res.json()
+    document.getElementById('section').innerHTML=`<img src=${data.image.url} width=200px; height=200px;>`
+ 
+}
+
+ 
+
+    </script>
+
+</body>
+</html>

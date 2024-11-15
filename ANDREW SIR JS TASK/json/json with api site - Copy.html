@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 20px;
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr)) ;
+}
+.card{
+    
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.3);
+}
+#section{
+    height: 100%;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="card">
+    <div id="section">
+
+    </div>
+
+    </div></div>
+
+        <button onclick="display()">random</button>
+
+    <script>
+let url='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/543'
+
+
+
+//fetch(url)       //check in console" respone"
+//.then(res=>console.log(res))
+
+
+
+fetch(url)                              //response success find location , object inside object
+.then(res=>res.json())                //convert into json and find where img(location path)  "data.image,url"
+.then(data=>console.log(data))
+
+
+//fetch(url)
+//.then(res=>res.json())     //check if its showing img
+//.then(data=>
+   // document.getElementById('section').innerHTML=`<img src=${data.image.url} height=200 width=200 >`)
+    
+
+//random id and add img//
+function display()          
+{ let id=Math.ceil(Math.random()*730)
+fetch(`${url}/${id}`)
+.then(res=>res.json())
+.then(data=> document.getElementById('section').innerHTML+=`<img src=${data.image.url} height=200 width=200><h2>name :${data.name}</h2><h3> occupation :${data.work.occupation}</h3><h4> Id :${data.id}</h4><h4>Age :${data.age}</h4>`)}
+//then(data=> document.getElementById('name').innerhtml+=`<h1>${data.work.occupation}<h1/>`
+
+//appearance.gender
+//console.log(data)    //check in console ,if not working//
+//)}
+//.then(data=>
+
+//const display=async()=>{
+   // let id=math.ceil(math.random()*730)
+
+  //  let res=await fetch(`//${url}/${id}`)
+  // let data=await res.json()
+   // document.getElementById('section').innerHTML+=`//<img src=${data.image.url} height=200 width=200 >`
+ 
+   //{data.work.occupation//
+   // 
+   // 
+    </script>
+
+</body>
+</html>

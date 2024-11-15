@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="section"></div>
+    
+
+    <script>
+let url='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/254'
+
+fetch(url)
+.then(res=>res.json())
+.then(data=>
+        document.getElementById('section').innerHTML=`<img src=${data.image.url} width=200px; height=200px;>`)
+ 
+
+    </script>
+
+</body>
+</html>

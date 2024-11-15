@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week days</title>
+    <style>
+        span {
+            color: blue;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="showDayButton">Show Today’s Day</button>
+   <h1>Today :<span id="dayDisplay"></span> </h1> 
+   <hr>
+   <button id="showmonthbtn">Show Current Month</button>
+   <h1>Month : <span id="monthDisplay"></span></h1>
+   <hr>
+
+    <script>
+function showDay()
+        {
+            const today = new Date();
+            const dayIndex = today.getDay();
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayName = daysOfWeek[dayIndex];
+            document.getElementById('dayDisplay').textContent = dayName;
+        }
+        document.getElementById('showDayButton').addEventListener('click', showDay);
+   
+function showMonth()
+{
+    const month = new Date();
+    const monthIndex =month.getMonth();
+    const numberOfMonth = ['jan','feb','march','april','may','june','july','agust','sep','october','nov','dec']
+    const monthName = numberOfMonth[monthIndex];
+    document.getElementById('monthDisplay').textContent = monthName;
+} 
+document.getElementById('showmonthbtn').addEventListener('click', showMonth);
+   
+   
+   
+   
+   </script>
+</body>
+</html>

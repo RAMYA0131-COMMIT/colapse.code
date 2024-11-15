@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            margin: 130px;
+            border: 3px solid black;
+            outline: 5px solid rgb(153, 153, 154);
+            height: 300px;
+            width: 300px;
+        }
+
+        .box2 {
+            height: 10%;
+            width: 100%;
+            border-bottom: 3px solid rgb(0, 0, 0);
+        }
+
+        h3 {
+            font-style: italic;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .box3 {
+
+            height: 30%;
+            width: 100%;
+            border-bottom: 3px solid rgb(0, 0, 0);
+        }
+
+        h1 {
+            font-size: 500%;
+            text-align: center;
+        }
+
+        .container-btn {
+
+            display: flex;
+
+            align-items: center;
+            border: 3px solid black;
+            margin: 5px;
+        }
+
+        button {
+            width: 50%;
+            height: 78px;
+        }
+
+        .buttom {
+            display: flex;
+            margin: 5px;
+            justify-content: center;
+        }
+
+        .btn3 {
+            border: 3px solid black;
+            
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box2">
+            <h3>COUNTER</h3>
+        </div>
+        <div class="box3">
+            <h1 id="number">000</h1>
+        </div>
+        <div class="container-btn">
+            <button onclick="increment">+</button>
+            <button onclick="decrement">-</button>
+        </div>
+        <div class="buttom">
+            <button onclick="reset">reset</button>
+        </div>
+
+    </div>
+<script>
+    let count = 0;
+    function updatedisplay(){
+        document.getElementById('number').innercontent=count;
+    }
+    function increment(){
+        count++;
+        updatedisplay();
+    }
+    function decrement(){
+        count--;
+        updatedisplay();
+    }
+    function reset(){
+        count=0;
+        updatedisplay();
+    }
+
+
+</script>
+
+
+</body>
+
+</html>

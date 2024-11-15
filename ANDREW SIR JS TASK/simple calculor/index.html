@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .calculator{
+        border: 1px solid black;
+        display: grid;
+        
+    }
+
+
+   </style>
+
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <div class="buttons">
+            <div class="container">
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>  
+ 
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+
+            <button class="number">0</button>
+            <button class="number">.</button>
+           
+           
+            <button class="operator">+</button>
+            <button class="operator">-</button>
+            <button class="operator">*</button>
+            <button class="operator">/</button>
+
+            <button class="clear">c</button>
+            <button class="number">=</button>
+            
+        </div>
+    </div>
+    <script>
+        const buttonE1 =document.querySelectorAll("button");
+
+const inputfieldE1 =document.getElementById("result")
+
+for (let i=0; i <buttonE1.length; i++){
+    buttonE1[i].addEventListener("click",()=>{
+        const buttonvalue =buttonE1[i].textContent;
+        if(buttonvalue === "c"){
+            clearResult()
+        } else if (buttonvalue === "="){
+            calculateresult()
+        } else {
+            appendvalue(buttonvalue);
+        }
+    })
+}
+
+function clearResult() {
+    inputfieldE1.value ="";
+}
+
+function calculateresult() {
+    inputfieldE1.value =eval(inputfieldE1.value);
+}
+
+function appendvalue(buttonvalue) {
+    inputfieldE1.value += buttonvalue;
+//    inputfieldE1.value =inputfieldE1.value + buttonvalue;
+}
+    </script>
+</body>
+</html> 

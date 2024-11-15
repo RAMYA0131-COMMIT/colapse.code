@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        h1 {
+
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+        }
+
+        .box {
+
+            align-items: center;
+            justify-content: center;
+            border: 5px solid rgb(1, 101, 101);
+            border-radius: 40px;
+            width: 300px;
+            height: 130px;
+            outline: 5px solid rgb(6, 191, 208);
+        }
+
+        #time {
+            font-size: 50px;
+            font-weight: 700;
+            color: rgb(47, 68, 202);
+        }
+    </style>
+</head>
+
+<body>
+
+ <h1>SetInterval() with CallBack</h2>
+        <h1>Clock :</h1>
+
+        <div class="container">
+            <div class="box">
+                <h1 id="time"> </h1>
+            </div>
+        </div>
+
+        <script>
+            setInterval(mytime, 1000);
+
+            function mytime() {
+                let a = new Date();
+                document.getElementById('time').innerHTML =
+                    a.getHours() + ":" +
+                    a.getMinutes() + ":" +
+                    a.getSeconds();
+
+            }
+
+        </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #textchange{
+            padding:30px;
+            color: rgb(255, 157, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Set timeout() with a callback</h1>
+<h3>wait 3seconds = (3000 milliseconds) for this page to change.</h3>
+
+<h1 id="textchange"></h1>
+<script>
+
+setTimeout(function()
+{change("I'm Learning JavaScript!!!")},3000);  
+
+function change(value){
+    document.getElementById("textchange").innerHTML =value;
+}
+
+</script>
+
+</body>
+</html>
