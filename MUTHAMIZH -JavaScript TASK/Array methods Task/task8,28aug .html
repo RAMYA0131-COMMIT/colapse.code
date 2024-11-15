@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+console.log("Task 2: Ingedients above 5 and below 5 ");
+
+//result data
+const fetchProduct = async () => {
+    try {
+      let apiCall = await fetch('https://dummyjson.com/recipes');
+      let Recipe = await apiCall.json();
+      let recipes = Recipe.recipes; 
+  
+      let above5_ingre = recipes.filter((el) => el.ingredients.length > 5);
+      let below5_ingre = recipes.filter((el) => el.ingredients.length < 5);
+  
+      console.log("above 5 Ingredients", above5_ingre)
+      console.log("below 5 Ingredients", below5_ingre)
+  
+    } catch (error) {
+      console.log("Check internet connections");
+    }
+  };
+  
+  fetchProduct();
+//my current data
+// let recipes = async () => {
+//     try {
+//         let res = await fetch('https://dummyjson.com/recipes');
+//         let data = await res.json();
+//         let recipeArray = data.recipes;
+    
+// //  let TotalIngredients = [];
+//  let above =[];
+//  let below=[];
+// let filterAbove =recipeArray.filter((a)=>a.ingredients.length>5);
+// let filterBelow =recipeArray.filter((a)=>a.ingredients.length<5);
+// console.log(above);
+// console.log(below);
+//     }
+//     catch (error)
+//     {
+//         console.log(error,'Error in recipes');
+//     }
+// };
+// recipes();     
+
+
+//i try this but not work data need to read code properly
+
+// const getRecipes = async()=>{
+//     let res =await fetch('https://dummyjson.com/recipes');
+//     let data = await res.json();
+//     let filterRecipes = data.recipes;
+//    // console.log(filterRecipes);
+    
+
+//     let total=[]
+//     let above=[]
+//     let Below=[]
+//     let ingredients=filterRecipes.map(Element=>Element.ingredients)
+//         //console.log(ingredients)
+//     let lengthinword=filterRecipes.map(i=>i.length);
+    
+//    let length=ingredients.map(i=>i.length);
+//    total.push(length);
+//    console.log("total  length of ingredients",total);
+// console.log(ingredients+lengthinword);
+   
+// above=lengthinword.filter(v=>v>5);
+// console.log("5 above",above);
+   
+// Below=ingredients.filter(v=>v<5);
+// console.log("5 below",Below);
+
+
+// let showdata=filterRecipes.map((e)=>{
+//     e.ingredients = e.ingredients >5
+// total.push(e)
+// })
+// console.log("Total Recipes ingredients",total);
+     
+
+//  total.forEach((v) => {
+//     if (v.ingredients ==false) {
+//         above.push(v);}
+//         else{Below.push(v)}}
+
+    
+//  );
+//    console.log(" above 5 ingredients",above);
+//    console.log("below 5 ingredients",Below);
+   
+    
+// }
+// getRecipes();
+        
+        </script>
+</body>
+</html>

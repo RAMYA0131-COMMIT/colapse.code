@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+console.log("Task 1: Cruisine ");
+
+let recipes = async () => {
+    try {
+        let res = await fetch('https://dummyjson.com/recipes');
+        let data = await res.json();
+        let recipeArray = data.recipes;
+ let filtercuisine = [];
+
+ let cuisine = recipeArray.map((e)=>{
+    let v =filtercuisine.includes(e.cuisine);
+    if(v == false) {
+        filtercuisine.push(e.cuisine);
+    }
+ })
+ console.log("cuisine From countries",filtercuisine);
+    }
+    catch {
+        console.log('Error fetching recipes');
+    }
+};
+recipes();     
+     
+</script>
+</body>
+</html>

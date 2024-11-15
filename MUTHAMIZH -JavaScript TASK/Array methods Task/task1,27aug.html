@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <SCRIpt>
+
+const fetchcall = async() => {
+    try{
+        let apicall = await fetch('https://dummyjson.com/products');
+        let product = await apicall.json();
+        let discount =[];
+         console.log(product.products,"kokoko");
+        
+        let discountmap = product.products.map((e)=>{
+          e.price = e.price-2
+          discount.push(e)
+          
+           })
+        
+        //console.log(discount);
+        
+    }catch(error){
+       // console.log("your network is very low ");
+        
+    }
+}
+fetchcall()
+
+
+    </SCRIpt>
+</body>
+</html>

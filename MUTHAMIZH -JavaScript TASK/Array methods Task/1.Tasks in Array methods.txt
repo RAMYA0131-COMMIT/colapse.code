@@ -1,0 +1,22 @@
+Tasks in Array methods in json fetch await under async function(product api data)
+
+1 -  map (fetch api) price-2$ value  and no other change in data(discount=2dollar)
+
+2 - filter- use filter to find above and below .push into new arrays separately
+
+3 - for each - catageroy seperate pananum find index two method to use ,(yesterday task)
+
+4 - concat - filter two array conact use pan oray array pananum
+
+5 - every method - fetch use pani product la alredy discount eruka nu check pananum 
+
+6 - includes- map use pani catagery ah display pananum
+
+---(recipes api data)
+
+7 - filter cuisine .push without duplicate
+
+8 - above 5 ingredients push into above array,below 5 ingredient push into below array
+	using .length
+
+9 - mealtype crete 3 empty array and push 3 type of meal filter,breakfast,dinner,lunch
