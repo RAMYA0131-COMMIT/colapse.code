@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="card">
+    <div id="section"></div></div>
+
+    <button onclick="next()" class="next">Next</button>
+    <button onclick="prev()" class="prev">prev</button>
+    </div>
+    
+    
+    <script>
+let url1='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/444'
+let url2='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/222'
+let url3='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/333'
+let url4='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/555'
+let url5='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/666'
+let url6='https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/111'
+
+
+
+
+
+fetch(())
+.then(res=>res.json())     
+.then(data=> document.getElementById('section').innerHTML=`<img src=${data.image.url} height=360 width=240 ><h2>name :${data.name}</h2><h3> occupation :${data.work.occupation}</h3><h4> Id :${data.id}</h4><h4>Age :${data.age}</h4>`)
+
+
+   
+    </script>
+
+</body>
+</html>
+</body>
+</html>

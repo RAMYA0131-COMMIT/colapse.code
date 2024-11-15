@@ -1,0 +1,50 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0,0.3);
+    width: 500px;
+    height: 500px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+}
+#section{
+    height: 100%;
+    width: 100%;
+}
+.next{
+    margin: 40px;
+    padding: 25px;
+    border: 1px solid rgb(82, 82, 82);
+    height: 80px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(98, 98, 98);
+    border-radius: 30px;
+    font-size: 2rem;
+}
+.prev{
+    margin: 40px;
+    padding: 25px;
+    border: 1px solid rgb(82, 82, 82);
+    height: 80px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(98, 98, 98);
+    border-radius: 30px;
+    font-size: 2rem;
+}

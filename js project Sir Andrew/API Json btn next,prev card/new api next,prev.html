@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Carousel</title>
+   <style>
+    /* styles.css */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px; /* Adjust as needed */
+    margin: auto;
+}
+
+.carousel-content {
+    text-align: center;
+}
+
+.carousel-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.carousel-button:hover {
+    background-color: #e0e0e0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+   </style>
+
+</head>
+<body>
+    <div class="carousel">
+        <button id="prev" class="carousel-button">Previous</button>
+        <div id="section" class="carousel-content"></div>
+        <button id="next" class="carousel-button">Next</button>
+    </div>
+    <script >
+        // script.js
+
+const urls = [
+    'https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/257',
+    'https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/545',
+    'https://www.superheroapi.com/api.php/6fff236defeac5fff485e315d811247f/616',
+];
+let currentIndex = 0;
+
+const section = document.getElementById('section');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+function fetchData(url) {
+    return fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            section.innerHTML = `
+                <img src="${data.image.url}" height="360" width="240">
+                <h2>Name: ${data.name}</h2>
+                <h3>Occupation: ${data.work.occupation}</h3>
+                <h4>ID: ${data.id}</h4>
+                <h4>Gender: ${data.appearance.gender}</h4>
+                <h4>Race: ${data.appearance.race}</h4>
+                <h4>base: ${data.work.base}</h4>
+            `;
+        });
+}
+
+function showImage() {
+    fetchData(urls[currentIndex]);
+}
+
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % urls.length;
+    showImage();
+}
+
+function showPrevImage() {
+    currentIndex = (currentIndex - 1 + urls.length) % urls.length;
+    showImage();
+}
+
+nextButton.addEventListener('click', showNextImage);
+prevButton.addEventListener('click', showPrevImage);
+showImage();
+
+    </script>
+</body>
+</html>

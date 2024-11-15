@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="tip.css">
+    <script src="tip.js"></script>
+</head>
+<body background="360_F_127102793_T3xjCOEUKV5vy3WgNMxpDRnEMSFFHh5b.jpg">
+    <div class="container">
+        <h1>Tip Calculator</h1>
+        <div class="input-group">
+            <label for="bill">Bill Amount (₹)</label>
+            <input type="number" id="bill" min="0" step="0.01">
+        </div>
+        <div class="input-group">
+            <label for="people">Number of People</label>
+            <input type="number" id="people" min="1" value="1" >
+        </div>
+        <div class="input-group">
+            <label for="tip">Tip Percentage (%)</label>
+            <input type="number" id="tip" min="2" step="1" value ="2">
+        </div>
+        <div class="results">
+            <div>Amount: <span id="totalAmount">₹0.00</span></div>
+            <div>Total Tip: <span id="totalTip">₹0.00</span></div>
+            <div>Total Amount per Person: <span id="amountPerPerson">₹0.00</span></div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
+
+ 
