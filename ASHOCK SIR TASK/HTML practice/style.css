@@ -1,0 +1,17 @@
+/* style.css */
+
+.playwrite-ng-modern-<uniquifier> {
+  font-family: "Playwrite NG Modern", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+h2 {
+    color: rgb(248, 184, 9);
+    font-size: 80px;
+    background-color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
