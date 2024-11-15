@@ -1,0 +1,35 @@
+Javascript Test
+1. Problem
+const students = [
+ { name: "Ram", age: 20, course: "PGDM" },
+ { name: "Meha", age: 22, course: "PGFSD" },
+ { name: "Amit", age: 21, course: "PGDM" },
+ { name: "Sita", age: 23, course: "PGFSD" },
+ { name: "Raj", age: 24, course: "PGDM" },
+ { name: "Priya", age: 22, course: "PGFSD" },
+ { name: "Karan", age: 25, course: "PGDM" },
+ { name: "Anita", age: 21, course: "PGFSD" },
+ { name: "Vikram", age: 23, course: "PGDM" },
+ { name: "Neha", age: 22, course: "PGFSD" }
+];
+I. Write a JavaScript function that takes an array of student 
+objects and returns the names of all students enrolled in 
+the 'PGFSD' course.
+II. Write a javascript function that takes a single input user 
+name if it is in array it should send the details or it should 
+send user not found
+-----
+2. Write a JavaScript function named generateNumbers that takes 
+a single input type. If the input type is 1, the function should 
+print all odd numbers from 1 to 100. If the input type is 2, the 
+function should print all even numbers from 1 to 100. If the 
+input is any other value, the function should throw an error 
+indicating that the input is invalid.
+Example:
+generateNumbers(1);
+// Output: 1, 3, 5, 7, 9, ..., 99
+generateNumbers(2);
+// Output: 2, 4, 6, 8, 10, ..., 100
+generateNumbers(3);
+// Output: Error: Invalid input, please enter 1 for odd numbers or 2 for 
+even numbers.
